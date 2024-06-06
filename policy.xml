@@ -1,0 +1,26 @@
+<policies>
+    <inbound>
+        <set-backend-service id="apim-generated-policy" backend-id="xinxueapi1-openai-endpoint" />
+        <authentication-managed-identity resource="https://cognitiveservices.azure.com/" />
+        <set-header name="x-request-received-value" exists-action="override">
+            <value>{{test}}</value>
+        </set-header>
+        <base />
+    </inbound>
+    <backend>
+        <base />
+    </backend>
+    <outbound>
+        <base />
+        <set-variable name="mynamedvalues" value="{{mynamedvalue}}" />
+        <set-header name="x-request-received-namevalues" exists-action="override">
+            <value>@{var c = (string)context.Variables["mynamedvalues"]; return c;}</value>
+        </set-header>
+        <set-header name="x-request-received-value" exists-action="override">
+            <value>{{test}}</value>
+        </set-header>
+    </outbound>
+    <on-error>
+        <base />
+    </on-error>
+</policies>
