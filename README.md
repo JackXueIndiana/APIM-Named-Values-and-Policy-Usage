@@ -1,5 +1,5 @@
 # APIM-Named-Values-and-Policy-Usage
-APIM Named Value is hosting name/value pair and particularly the value is a string. Named Values | Azure API Management Hands on Lab states that Named Values (aka Properties) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage string constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
+APIM Named Value is hosting name/value pair and particularly the value is a string. 'https://azure.github.io/apim-lab/apim-lab/4-policy-expressions/policy-expressions-4-4-named-values.html' states that Named Values (aka Properties) are a collection of key/value pairs that are global to the service instance. These properties can be used to manage string constants across all API configurations and policies. Values can be expressions, secrets (encrypted by APIM), or Key Vault, which links to a corresponding secret in Azure Key Vault.
 
 The usage of Named Value is documented in How to use named values in Azure API Management policies | Microsoft Learn.
 
