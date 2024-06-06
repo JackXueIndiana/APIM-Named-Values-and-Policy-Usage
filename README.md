@@ -40,13 +40,13 @@ In your policy you write:
 <set-variable name="mynamedvalues" value="{{mynamedvalue}}" />
 <set-header name="x-request-received-namevalues" exists-action="override">
 <value>@{
-var c = (string)context.Variables["mynamedvalues"]; 
-return c;
-}</value>
-        </set-header>
-        <set-header name="x-request-received-value" exists-action="override">
-            <value>{{test}}</value>
-        </set-header>
+        var c = (string)context.Variables["mynamedvalues"]; 
+        return c;
+    }</value>
+</set-header>
+<set-header name="x-request-received-value" exists-action="override">
+    <value>{{test}}</value>
+</set-header>
 ~~~
 You can expect this output:
 ~~~
